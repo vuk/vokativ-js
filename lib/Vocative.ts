@@ -1,7 +1,7 @@
 ///<reference path="..\definitions\definitions.d.ts" />
 var fs = require('fs');
 var q = require('q');
-var azbuka = require('./azbuka');
+var azbuka = require('./Azbuka');
 var striptags = require('striptags');
 
 class Vocative {
