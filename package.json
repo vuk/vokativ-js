@@ -1,0 +1,35 @@
+{
+  "name": "vokativ-js",
+  "version": "2.0.6",
+  "description": "Port of PHP Vocative library for Serbian language",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vuk/vokativ-js.git"
+  },
+  "keywords": [
+    "Vocative"
+  ],
+  "author": "Vuk Stankovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuk/vokativ-js/issues"
+  },
+  "homepage": "https://github.com/vuk/vokativ-js#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^5.5.1",
+    "grunt-typedoc": "^0.2.3",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "q": "^1.4.1",
+    "striptags": "^2.1.1"
+  }
+}
