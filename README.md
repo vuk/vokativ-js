@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vuk/vokativ-js.svg?branch=master)](https://travis-ci.org/vuk/vokativ-js)
+
 # Vokativ JS
 
 ## Acknowledgements
