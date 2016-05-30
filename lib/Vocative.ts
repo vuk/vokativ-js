@@ -10,6 +10,7 @@ class Vocative {
 	private cyrillic = null;
 	private exceptionCases = '';
 	private source = '';
+	/*private transformRules: any;*/
 
 	getSource(){
 		return this.source;
@@ -23,12 +24,12 @@ class Vocative {
 		return this.exceptionCases;
 	}
 	
-	constructor(file?: string) {
+	constructor() {
 		var path = __dirname + '/../data/dictonary.json';
-		if(file !== undefined){
-			path = file;
-		}
+		var rulesPath = __dirname + '/../data/rules.json';
+		
 		this.exceptionCases = JSON.parse(fs.readFileSync(path, 'utf8'));
+		/*this.transformRules = JSON.parse(fs.readFileSync(rulesPath, 'utf8'));*/
 	}
 
 	/**
@@ -121,6 +122,30 @@ class Vocative {
 		return response;
 	}
 
+	/*checkRules(nominativ: string){
+		console.log(nominativ);
+		var shouldReturn = false;
+		var conditions = '';
+		for(var rule in this.transformRules.rules){
+			conditions += "if("
+			var conditionsLength = this.transformRules[rule].conditions.length;
+			for(var condition in this.transformRules[rule].conditions){
+				condition += 'nominativ.substring(nominativ.length - '+this.transformRules[rule].conditions[condition].lastLetters+', nominativ.length) == \''+this.transformRules[rule].conditions[condition].value+'\'';
+				conditionsLength --;
+				if(conditionsLength > 0) condition += " || ";
+			}
+			conditions += ")";
+			console.log(conditions);
+			if(eval(conditions)){
+				shouldReturn = true;
+				var operations = "this.vokativ = nominativ.substring(0, nominativ.length - "+this.transformRules[rule].transformation.lastLetters+") + '"+this.transformRules[rule].transformation.with+"';"
+				console.log(operations);
+				return ;
+			}
+		}
+		return;
+	}*/
+
 	make(nominativ: string) {
 		this.vokativ = '';
 		var exceptions = this.getExceptions();
@@ -144,7 +169,7 @@ class Vocative {
 					else {
 						return this.capitalizeName(this.transliterate(exceptions[nominativ]));
 					}
-				}
+				}				
 
 				if (nominativ.substring(nominativ.length - 3, nominativ.length) == 'TAR' || nominativ.substring(nominativ.length - 3, nominativ.length) == 'DAR') //PETAR, ALEKSANDAR
 					this.vokativ = nominativ.substring(0, nominativ.length - 2) + 'RE';
