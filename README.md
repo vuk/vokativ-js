@@ -46,4 +46,4 @@ vocative.async('Вук', function(err, value){
 
 ### Note: 
 
-Due to significant similarity, this library should also work just fine with Croatian, Bosnian, Montenegrin languages, but if there are any rules that algorithm may have missed feel free to contact me or make a pull request. 
+Due to significant similarity, this library should also work just fine with former Yuboslav languages such as Croatian, Bosnian, Montenegrin, but if there are any rules that algorithm may have missed feel free to contact me or make a pull request. 
