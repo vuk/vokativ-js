@@ -47,14 +47,3 @@ vocative.async('Вук', function(err, value){
 ### Note: 
 
 Due to significant similarity, this library should also work just fine with Croatian, Bosnian, Montenegrin languages, but if there are any rules that algorithm may have missed feel free to contact me or make a pull request. 
-
-If we find significant incompatibilities between any of the languages we could change API to something like this 
-
-```javascript
-
-	var promised 	= function(name, lang) { };
-	var async		= function(name, lang, callback) { };
-
-```
-
-Where `lang` could be equal to `sr`, `hr`, `ba`, `me`
