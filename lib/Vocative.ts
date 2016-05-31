@@ -3,6 +3,7 @@ var fs = require('fs');
 var q = require('q');
 var azbuka = require('./Azbuka');
 var striptags = require('striptags');
+var _ = require('lodash');
 
 class Vocative {
 
@@ -46,22 +47,8 @@ class Vocative {
 	transliterate(text: string, toLat = true)
     {
 		if (!toLat)
-			azbuka = this.arrayFlip(azbuka);
+			azbuka = _.invert(azbuka);
 		return this.strtr(text, azbuka);
-	}
-
-	/**
-	* Implementation of PHP array_flip
-	*/
-	arrayFlip(trans: Array<any>) {
-	    var key, tmp_ar = {};
-
-	    for (key in trans) {
-	        if (trans.hasOwnProperty(key)) {
-	            tmp_ar[trans[key]] = key;
-	        }
-	    }
-	    return tmp_ar;
 	}
 
 	/**
