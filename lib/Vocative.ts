@@ -109,30 +109,6 @@ class Vocative {
 		return response;
 	}
 
-	/*checkRules(nominativ: string){
-		console.log(nominativ);
-		var shouldReturn = false;
-		var conditions = '';
-		for(var rule in this.transformRules.rules){
-			conditions += "if("
-			var conditionsLength = this.transformRules[rule].conditions.length;
-			for(var condition in this.transformRules[rule].conditions){
-				condition += 'nominativ.substring(nominativ.length - '+this.transformRules[rule].conditions[condition].lastLetters+', nominativ.length) == \''+this.transformRules[rule].conditions[condition].value+'\'';
-				conditionsLength --;
-				if(conditionsLength > 0) condition += " || ";
-			}
-			conditions += ")";
-			console.log(conditions);
-			if(eval(conditions)){
-				shouldReturn = true;
-				var operations = "this.vokativ = nominativ.substring(0, nominativ.length - "+this.transformRules[rule].transformation.lastLetters+") + '"+this.transformRules[rule].transformation.with+"';"
-				console.log(operations);
-				return ;
-			}
-		}
-		return;
-	}*/
-
 	make(nominativ: string) {
 		this.vokativ = '';
 		var exceptions = this.getExceptions();

@@ -18,4 +18,11 @@ var vocative = {
 	}
 }
 
+v.make('Партизан')
+	.then((value) => {
+		console.log(value);
+		return value;
+	});
+
 export = vocative;
+

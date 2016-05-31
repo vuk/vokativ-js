@@ -15,4 +15,9 @@ var vocative = {
         }).nodeify(callback);
     }
 };
+v.make('Партизан')
+    .then(function (value) {
+    console.log(value);
+    return value;
+});
 module.exports = vocative;
