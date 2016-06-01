@@ -15,9 +15,4 @@ var vocative = {
         }).nodeify(callback);
     }
 };
-vocative.async('Peder', function (err, value) {
-    if (!err) {
-        console.log("Здраво " + value);
-    }
-});
 module.exports = vocative;
