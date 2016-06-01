@@ -15,5 +15,4 @@ var vocative = {
         }).nodeify(callback);
     }
 };
-
 module.exports = vocative;
