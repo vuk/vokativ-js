@@ -1,6 +1,6 @@
 {
   "name": "vokativ-js",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "Port of PHP Vocative library for Serbian language",
   "main": "index.js",
   "scripts": {
