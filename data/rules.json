@@ -200,6 +200,20 @@
 				"with": "GO"
 			}
 		},
+		"rule14a": {
+			"description": "KAVGA",
+			"conditions": {
+				"condition1" : {
+					"lastLetters": 2,
+					"value": "ER"
+				}
+			},
+			"transformation": {
+				"lastLetters": 0,
+				"type": "replace",
+				"with": "U"
+			}
+		},
 		"rule15": {
 			"description": "DARINKA, MILKA, BORKA, ALI NE I RAKA, MIKA",
 			"conditions": {

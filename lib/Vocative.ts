@@ -160,6 +160,8 @@ class Vocative {
 					this.vokativ = nominativ.substring(0, nominativ.length - 3) + 'NJU';
 				else if (nominativ.substring(nominativ.length - 2, nominativ.length) == 'GA')    //KAVGA
 					this.vokativ = nominativ.substring(0, nominativ.length - 2) + 'GO';
+				else if (nominativ.substring(nominativ.length - 2, nominativ.length) == 'ER')    //FEDER, SREDER
+					this.vokativ = nominativ.substring(0, nominativ.length - 0) + 'U';
 
 				else if ((nominativ.substring(nominativ.length - 2, nominativ.length) == 'KA') && (nominativ.length > 4))  //DARINKA, MILKA, BORKA, ALI NE I RAKA, MIKA
 					this.vokativ = nominativ;
