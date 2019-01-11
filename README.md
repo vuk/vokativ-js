@@ -18,33 +18,36 @@ Optionally you can add `--save` flag to update `package.json` dependency list
 
 ## Usage 
 
-### Using vokativ-js with promises (from [Q library](https://github.com/kriskowal/q))
+### As promise
 
 ```javascript
 
-var vocative = require('vokativ-js');
+var Vocative = require('vokativ-js').Vocative;
 
-vocative.promised('Vuk')
-    .then(function(value){
-    	console.log("Zdravo " + value); // Will reply with "Zdravo Vuče"
+var v = new Vokativ();
+v.make('Vuk')
+    .then((vocative) => {
+        console.log(vocative);
     });
 
 ```
 
-### Using vokativ-js with callbacks 
+### With async/await 
 
 ```javascript
 
-var vocative = require('vokativ-js');
+var Vokativ = require('vokativ-js').Vocative;
 
-vocative.async('Вук', function(err, value){
-	if(!err){
-		console.log("Здраво " + value); // Will reply with "Здраво Вуче" - so cyrillic script works as well
-	}
-});
+async function demo () {
+    var v = new Vokativ();
+    let name = await v.make('Vuk');
+    console.log(name);    
+}
+
+demo();
 
 ```
 
 ### Note: 
 
-Due to significant similarity, this library should also work just fine with former Yugoslav languages such as Croatian, Bosnian, Montenegrin, but if there are any rules that algorithm may have missed feel free to contact me or make a pull request. 
+Due to significant similarity, this library should also work just fine with former Yugoslav languages such as Croatian, Bosnian, Montenegrin, but if there are any rules that were missed feel free to contact me or make a pull request. 
