@@ -1,5 +1,4 @@
-///<reference path="..\definitions\definitions.d.ts" />
-var azbuka = {
+export default {
 	"а" : "a",
     "б" : "b",
 	"в" : "v",
@@ -61,5 +60,3 @@ var azbuka = {
 	"Џ" : "DŽ",
 	"Ш" : "Š",
 };
-
-export = azbuka;

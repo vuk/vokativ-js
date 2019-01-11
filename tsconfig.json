@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "lib": [
+      "es2015"
+    ],
+    "types": [
+      "node",
+      "jest",
+      "lodash",
+      "striptags"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts"
+  ]
+}

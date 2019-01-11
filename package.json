@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node ./node_modules/mocha/bin/mocha"
+    "build": "./node_modules/typescript/bin/tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,18 +22,19 @@
   },
   "homepage": "https://github.com/vuk/vokativ-js#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.9",
-    "grunt": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-ts": "^5.5.1",
-    "grunt-typedoc": "^0.2.3",
-    "mocha": "^2.4.5"
+    "@types/jest": "^23.3.12",
+    "@types/lodash": "^4.14.119",
+    "@types/node": "^8.10.39",
+    "copy-webpack-plugin": "^4.6.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.4"
   },
   "dependencies": {
-    "async": "^2.0.0-rc.5",
     "lodash": "^4.13.1",
-    "q": "^1.4.1",
-    "striptags": "^2.1.1"
+    "striptags": "^3.0.0"
   }
 }
