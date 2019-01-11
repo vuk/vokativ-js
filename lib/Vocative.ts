@@ -2,7 +2,6 @@ import azbuka from './Azbuka';
 import * as _ from 'lodash';
 import * as striptags from 'striptags';
 import * as fs from 'fs';
-import * as path from 'path';
 
 export class Vocative {
 
@@ -24,8 +23,7 @@ export class Vocative {
 	}
 
 	constructor() {
-		process.chdir(__dirname);
-		var pth = path.resolve(__dirname, './data/dictonary.json');
+		var pth = require.resolve('./data/dictonary.json');
 		/** TODO Use JSON rules */
 		// var rulesPath = __dirname + '/../data/rules.json';
 		console.log(pth);
