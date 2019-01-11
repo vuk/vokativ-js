@@ -2,7 +2,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './index.ts',
+    entry: path.resolve(__dirname, './index.ts'),
     module: {
         rules: [
             {
@@ -13,11 +13,17 @@ module.exports = {
         ]
     },
     target: 'node',
-    mode: 'production',
+    node: {
+    __dirname: false,
+    __filename: false,
+    },
+    mode: 'development',
     resolve: {
         extensions: ['.tsx', '.ts']
     },
     output: {
+        library: 'Vocative',
+        libraryTarget: 'umd',
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },

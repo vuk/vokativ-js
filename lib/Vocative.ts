@@ -23,10 +23,9 @@ export class Vocative {
 	}
 
 	constructor() {
-		var pth = require.resolve('./data/dictonary.json');
+		var pth = __dirname + '/../data/dictonary.json';
 		/** TODO Use JSON rules */
 		// var rulesPath = __dirname + '/../data/rules.json';
-		console.log(pth);
 		let exceptions = fs.readFileSync(pth);
 		this.exceptionCases = JSON.parse(exceptions.toString('utf8', 0, exceptions.length));
 		/*this.transformRules = JSON.parse(fs.readFileSync(rulesPath, 'utf8'));*/
