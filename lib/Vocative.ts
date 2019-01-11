@@ -24,7 +24,7 @@ export class Vocative {
 	}
 	
 	constructor() {
-		var pth = path.resolve(__dirname + '/data/dictonary.json');
+		var pth = path.resolve(__dirname, './data/dictonary.json');
 		/** TODO Use JSON rules */
 		// var rulesPath = __dirname + '/../data/rules.json';
 		console.log(pth);
