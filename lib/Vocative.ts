@@ -2,6 +2,7 @@ import azbuka from './Azbuka';
 import * as _ from 'lodash';
 import * as striptags from 'striptags';
 import * as fs from 'fs';
+import * as path from 'path';
 
 export class Vocative {
 
@@ -23,11 +24,11 @@ export class Vocative {
 	}
 	
 	constructor() {
-		var path = './data/dictonary.json';
+		var pth = path.resolve(__dirname + '/data/dictonary.json');
 		/** TODO Use JSON rules */
 		// var rulesPath = __dirname + '/../data/rules.json';
-		console.log(path);
-		let exceptions = fs.readFileSync(path);
+		console.log(pth);
+		let exceptions = fs.readFileSync(pth);
 		this.exceptionCases = JSON.parse(exceptions.toString('utf8', 0, exceptions.length));
 		/*this.transformRules = JSON.parse(fs.readFileSync(rulesPath, 'utf8'));*/
 	}
@@ -46,7 +47,6 @@ export class Vocative {
 	private transliterate(text: string, toLat = true): string
     {
 		let latinica = toLat ? azbuka : _.invert(azbuka);
-		console.log(latinica);
 		return this.strtr(text, latinica);
 	}
 
