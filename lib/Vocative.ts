@@ -22,8 +22,9 @@ export class Vocative {
 	getExceptions(): Array<String> {
 		return this.exceptionCases;
 	}
-	
+
 	constructor() {
+		process.chdir(__dirname);
 		var pth = path.resolve(__dirname, './data/dictonary.json');
 		/** TODO Use JSON rules */
 		// var rulesPath = __dirname + '/../data/rules.json';
@@ -36,7 +37,7 @@ export class Vocative {
 	/**
 	* Method to make sure provided name is in correct case (first letter of uppercase)
 	*/
-	private capitalizeName(name: string){
+	private capitalizeName(name: string) {
 		name = name.toLowerCase();
 		return name.charAt(0).toUpperCase() + name.slice(1);
 	}
@@ -44,8 +45,7 @@ export class Vocative {
 	/**
 	* Method transliterates cyrilic to latin and viceversa
 	*/
-	private transliterate(text: string, toLat = true): string
-    {
+	private transliterate(text: string, toLat = true): string {
 		let latinica = toLat ? azbuka : _.invert(azbuka);
 		return this.strtr(text, latinica);
 	}
@@ -68,18 +68,17 @@ export class Vocative {
      * @param string $input
      * @return string
      */
-    private removeExtras(input: string): string {
+	private removeExtras(input: string): string {
 		input = input.trim();
 		input = striptags(input);
 		input = this.transliterate(input);
 		return input;
 	}
 
-	private isCyrillic(text: string): Promise<boolean>
-	{
+	private isCyrillic(text: string): Promise<boolean> {
 		return new Promise((resolve, reject) => {
 			for (var i = 0; i < text.length; i++) {
-				if (!azbuka.hasOwnProperty(text[i])){
+				if (!azbuka.hasOwnProperty(text[i])) {
 					resolve(false);
 				}
 			}
@@ -91,7 +90,7 @@ export class Vocative {
 		this.vokativ = '';
 		var exceptions = this.getExceptions();
 		this.cyrillic = await this.isCyrillic(nominativ);
-		if(this.cyrillic) {
+		if (this.cyrillic) {
 			nominativ = this.transliterate(nominativ);
 		}
 		nominativ = this.removeExtras(nominativ);
