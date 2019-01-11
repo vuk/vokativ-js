@@ -1,12 +1,12 @@
 # Vokativ JS
 
 [![Build Status](https://travis-ci.org/vuk/vokativ-js.svg?branch=master)](https://travis-ci.org/vuk/vokativ-js)
-[![NPM version](https://img.shields.io/badge/Latest%20Version-2.0.12-green.svg)](https://www.npmjs.com/package/vokativ-js)
+[![NPM version](https://img.shields.io/badge/Latest%20Version-3.0.8-green.svg)](https://www.npmjs.com/package/vokativ-js)
 
 
 ## Acknowledgements
 
-This is a NodeJS port of PHP Vocative case library for Serbian language written by [Nemanja Avramovic](https://github.com/avramovic). 
+This is a JavaScript port of PHP Vocative case library for Serbian language written by [Nemanja Avramovic](https://github.com/avramovic). 
 
 Original idea and PHP implementation can be found at [Vokativ](https://github.com/avramovic/Vokativ). 
 
@@ -45,6 +45,21 @@ async function demo () {
 }
 
 demo();
+
+```
+
+### With Typescript
+
+```typescript
+
+import { Vocative } from "vokativ-js";
+
+let v = new Vocative();
+
+v.make('Vuk')
+    .then((vocative) => {
+        console.log(vocative);
+    });
 
 ```
 
