@@ -1,6 +1,6 @@
 {
   "name": "vokativ-js",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "Port of PHP Vocative library for Serbian language",
   "main": "dist/bundle.js",
   "scripts": {
@@ -13,7 +13,9 @@
     "url": "git+ssh://git@github.com/vuk/vokativ-js.git"
   },
   "keywords": [
-    "Vocative"
+    "Vocative",
+    "Grammar",
+    "Utility"
   ],
   "author": "Vuk Stankovic",
   "license": "MIT",
@@ -35,7 +37,7 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "lodash": "^4.13.1",
-    "striptags": "^3.0.0"
+    "lodash": "^4.17.10",
+    "striptags": "^3.1.0"
   }
 }
