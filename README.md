@@ -1,7 +1,7 @@
 # Vokativ JS
 
 [![Build Status](https://travis-ci.org/vuk/vokativ-js.svg?branch=master)](https://travis-ci.org/vuk/vokativ-js)
-[![NPM version](https://img.shields.io/badge/Latest%20Version-3.0.8-green.svg)](https://www.npmjs.com/package/vokativ-js)
+[![NPM version](https://img.shields.io/badge/Latest%20Version-3.0.10-green.svg)](https://www.npmjs.com/package/vokativ-js)
 
 
 ## Acknowledgements
@@ -24,7 +24,7 @@ Optionally you can add `--save` flag to update `package.json` dependency list
 
 var Vocative = require('vokativ-js').Vocative;
 
-var v = new Vokativ();
+var v = new Vocative();
 v.make('Vuk')
     .then((vocative) => {
         console.log(vocative);
@@ -36,10 +36,10 @@ v.make('Vuk')
 
 ```javascript
 
-var Vokativ = require('vokativ-js').Vocative;
+var Vocative = require('vokativ-js').Vocative;
 
 async function demo () {
-    var v = new Vokativ();
+    var v = new Vocative();
     let name = await v.make('Vuk');
     console.log(name);    
 }
