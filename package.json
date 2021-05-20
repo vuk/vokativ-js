@@ -1,6 +1,6 @@
 {
   "name": "vokativ-js",
-  "version": "3.0.10",
+  "version": "3.1.0",
   "description": "Port of PHP Vocative library for Serbian language",
   "main": "dist/bundle.js",
   "scripts": {
@@ -24,20 +24,20 @@
   },
   "homepage": "https://github.com/vuk/vokativ-js#readme",
   "devDependencies": {
-    "@types/jest": "^23.3.12",
-    "@types/lodash": "^4.14.119",
-    "@types/node": "^8.10.39",
-    "copy-webpack-plugin": "^4.6.0",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.5",
-    "ts-loader": "^5.3.3",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.2.2",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.169",
+    "@types/node": "^15.3.1",
+    "copy-webpack-plugin": "^8.1.1",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.6",
+    "ts-loader": "^9.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
-    "striptags": "^3.1.0"
+    "lodash": "^4.17.21",
+    "striptags": "^3.1.1"
   }
 }

@@ -14,8 +14,8 @@ module.exports = {
     },
     target: 'node',
     node: {
-    __dirname: false,
-    __filename: false,
+        __dirname: false,
+        __filename: false,
     },
     mode: 'development',
     resolve: {
@@ -28,8 +28,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new CopyWebpackPlugin([
-            { from: 'lib/data/*', to: '' },
-        ])
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'data/*', to: '' },
+            ],
+        })
     ]
 };
