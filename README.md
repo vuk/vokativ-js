@@ -4,7 +4,7 @@
 
 [![Build Status](https://app.travis-ci.com/vuk/vokativ-js.svg?branch=master)](https://app.travis-ci.com/vuk/vokativ-js)
 
-## Acknowledgements
+## Acknowledgement
 
 This is a JavaScript port of PHP Vocative case library for Serbian language written by [Nemanja Avramovic](https://github.com/avramovic).
 
