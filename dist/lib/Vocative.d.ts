@@ -24,8 +24,10 @@ export declare class Vocative {
      * @return string
      */
     private removeExtras;
+    private isCyrilicSync;
     private isCyrillic;
     make(nominativ: string): Promise<string>;
+    call(nominativ: string): string;
 }
 declare const _default: Vocative;
 export default _default;
