@@ -1,6 +1,6 @@
 # Vokativ JS
 
-[![NPM version](https://img.shields.io/badge/Latest%20Version-3.0.10-green.svg)](https://www.npmjs.com/package/vokativ-js)
+[![NPM version](https://img.shields.io/badge/Latest%20Version-3.2.2-green.svg)](https://www.npmjs.com/package/vokativ-js)
 
 ## Acknowledgements
 
