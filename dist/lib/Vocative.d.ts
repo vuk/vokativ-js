@@ -5,7 +5,9 @@ export declare class Vocative {
     private source;
     getSource(): string;
     getCyrillic(): boolean;
-    getExceptions(): Array<String>;
+    getExceptions(): {
+        [key: string]: string;
+    };
     constructor();
     /**
     * Method to make sure provided name is in correct case (first letter of uppercase)
