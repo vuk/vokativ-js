@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/badge/Latest%20Version-3.2.2-green.svg)](https://www.npmjs.com/package/vokativ-js)
 
-[![Build Status](https://app.travis-ci.com/vuk/vokativ-js.svg?branch=master)](https://app.travis-ci.com/vuk/vokativ-js)
+<!-- [![Build Status](https://app.travis-ci.com/vuk/vokativ-js.svg?branch=master)](https://app.travis-ci.com/vuk/vokativ-js) -->
 
 ## Acknowledgement
 
