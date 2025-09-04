@@ -1,13 +1,13 @@
 import azbuka from './Azbuka';
 import * as _ from 'lodash';
-import * as striptags from 'striptags';
-import * as fs from 'fs';
+import striptags from 'striptags';
+import { VOCATIVE_DICTIONARY } from '../data/dictionary';
 
 export class Vocative {
 
 	private vokativ: string = '';
 	private cyrillic: boolean = false;
-	private exceptionCases: Array<String> = [];
+	private exceptionCases: Record<string, string> = {};
 	private source: string = '';
 
 	getSource(): string {
@@ -18,17 +18,12 @@ export class Vocative {
 		return this.cyrillic;
 	}
 
-	getExceptions(): Array<String> {
+	getExceptions(): Record<string, string> {
 		return this.exceptionCases;
 	}
 
 	constructor() {
-		var pth = __dirname + '/../data/dictonary.json';
-		/** TODO Use JSON rules */
-		// var rulesPath = __dirname + '/../data/rules.json';
-		let exceptions = fs.readFileSync(pth);
-		this.exceptionCases = JSON.parse(exceptions.toString('utf8', 0, exceptions.length));
-		/*this.transformRules = JSON.parse(fs.readFileSync(rulesPath, 'utf8'));*/
+		this.exceptionCases = VOCATIVE_DICTIONARY;
 	}
 
 	/**
