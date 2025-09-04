@@ -1,6 +1,6 @@
 import azbuka from './Azbuka';
 import * as _ from 'lodash';
-import * as striptags from 'striptags';
+import striptags from 'striptags';
 import { VOCATIVE_DICTIONARY } from '../data/dictionary';
 
 export class Vocative {
